@@ -26,3 +26,38 @@ Este projeto demonstra o uso de algumas bibliotecas poderosas de Python para obt
 ```bash
 pip install requests beautifulsoup4 selenium webdriver_manager
 ```
+
+## Execução
+Basta rodar o script Python, que irá automaticamente buscar sua localização e exibir o clima atual, além da previsão para os próximos dias.
+
+```bash
+python script.py
+
+```
+O script detecta a sua localização automaticamente e busca o clima para sua cidade. Caso o BeautifulSoup não consiga obter as informações desejadas, o ```Selenium``` é utilizado como fallback para buscar os dados diretamente no site ```tempo.com.```
+
+## Exemplo de Saída
+```bash
+Essa é sua localização!
+Cidade: São Paulo
+Região: São Paulo
+País: BR
+
+Localização: São Paulo
+Horário: Sexta-feira 10:00 AM
+Temperatura Atual: 25°C
+Condição: Ensolarado
+
+Previsão para os próximos dias:
+Sábado: Máxima de 27°C, Mínima de 18°C - Condição: Parcialmente Nublado
+Domingo: Máxima de 30°C, Mínima de 20°C - Condição: Ensolarado
+```
+## Notas
+- O código primeiro tenta obter os dados climáticos usando ```BeautifulSoup``` para realizar scraping no Google.
+
+- Caso o ```BeautifulSoup``` não consiga encontrar os dados, o Selenium é ativado para acessar diretamente o site ```tempo.com``` e buscar as informações.
+
+- O código também formata o nome da cidade para URLs de maneira adequada, removendo acentos e espaços.
+
+## Contribuições
+Sinta-se à vontade para abrir issues ou enviar pull requests para melhorar o projeto 🚀🚀🚀.
